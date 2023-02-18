@@ -17,3 +17,5 @@ __pycache__/
 
 # ci (local runs)
 requirements-dev.txt
+
+.python-version
