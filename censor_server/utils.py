@@ -53,7 +53,7 @@ def censor_text(text: str, leave_uncensored: int = 4) -> str:
     )
 
 
-def get_est_time(datetime_to_convert: datetime = None) -> str:
+def get_est_time(datetime_to_convert: datetime | None = None) -> str:
     """
     Gets the current time (or 'datetime_to_convert' arg, if provided) as datetime and converts it to a
     readable string
@@ -136,7 +136,7 @@ def json_load_eval(fp_obj: TextIO) -> Dict:
 async def get_hook_in_server(
     message: DiscordMessage, hook_user: DiscordUser
 ) -> Union[DiscordWebhook, None]:
-    if type(message.channel) != DiscordChannel:
+    if type(message.channel) is not DiscordChannel:
         return None
     found_hook = None
     hooks = await message.channel.webhooks()
