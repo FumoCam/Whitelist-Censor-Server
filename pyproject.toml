@@ -13,7 +13,7 @@ websockets = "^10.3"
 aiofiles = "^22.1.0"
 
 [tool.poetry.dev-dependencies]
-black = "^22.8.0"
+black = "^24.3.0"
 bandit = "^1.7.4"
 flake8 = "^5.0.4"
 isort = "^5.10.1"
